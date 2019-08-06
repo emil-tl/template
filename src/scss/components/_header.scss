@@ -1,0 +1,146 @@
+.header {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  @at-root #{&}__inner {
+    position: relative;
+    z-index: 2;
+    padding: calculateRem(32px) 0;
+
+    @include tablet {
+      background-color: $color-blue-light;
+      padding: calculateRem(14px) 0;
+    }
+  }
+
+  @at-root #{&}__container {
+    @include container;
+
+    @at-root .page-main & {
+      @include from-to($desktop-large, $tablet) {
+        max-width: none;
+        padding-left: calculateRem(20px);
+        padding-right: calculateRem(20px);
+      }
+    }
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include desktop-small {
+      position: relative;
+    }
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  @at-root #{&}__content {
+    @include min-desktop-medium {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @at-root #{&}__logo {
+    @include backgroundImageContain;
+
+    display: block;
+    width: calculateRem(120px);
+    height: calculateRem(60px);
+    background-image: url($svg-path + 'logo.svg');
+    flex-shrink: 0;
+
+    @include min-desktop-medium {
+      margin-right: calculateRem(72px);
+    }
+
+    @include from-to($desktop-medium, $tablet) {
+      margin-bottom: calculateRem(24px);
+    }
+
+    @include tablet {
+      width: calculateRem(100px);
+      height: calculateRem(52px);
+    }
+
+    @include mobile {
+      width: calculateRem(80px);
+      height: calculateRem(40px);
+    }
+
+    @include mobile-small {
+      width: calculateRem(64px);
+      height: calculateRem(32px);
+    }
+  }
+
+  @at-root #{&}__list {
+    display: flex;
+    align-items: center;
+
+    & > :last-child {
+      margin-right: 0;
+    }
+  }
+
+  @at-root #{&}__nav {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__item {
+    display: block;
+    margin-right: calculateRem(32px);
+  }
+
+  @at-root #{&}__link {
+    @include transition-color;
+
+    display: block;
+    font-family: $font-pt-cuprum;
+    font-size: calculateRem(24px);
+    line-height: calculateRem(32px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &:hover {
+      color: rgba($color-white, 0.8);
+    }
+
+    @include desktop-large {
+      font-size: calculateRem(20px);
+      line-height: calculateRem(28px);
+    }
+  }
+
+  @at-root #{&}__buttons {
+    @include desktop-small {
+      position: absolute;
+      top: 0;
+      right: calculateRem(20px);
+    }
+
+    @include min-tablet {
+      display: flex;
+      align-items: center;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @at-root #{&} .button {
+      &:not(:last-child) {
+        margin-right: calculateRem(32px);
+      }
+    }
+  }
+}

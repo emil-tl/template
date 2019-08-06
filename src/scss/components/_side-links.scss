@@ -1,0 +1,84 @@
+.side-links {
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  @at-root #{&}__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba($color-white, 0.2);
+    border-radius: 4px;
+    padding: calculateRem(31px);
+    height: calculateRem(112px);
+    color: $color-white;
+    font-size: calculateRem(20px);
+    line-height: calculateRem(26px);
+    font-family: $font-pt-cuprum;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: border-color 0.2s ease-out;
+    margin-bottom: calculateRem(16px);
+    fill: $color-green;
+
+    &:hover,
+    &:focus {
+      padding: calculateRem(30px);
+      border: 2px solid $color-green;
+    }
+
+    svg {
+      display: block;
+      width: calculateRem(40px);
+      height: calculateRem(40px);
+      flex-shrink: 0;
+      margin-left: calculateRem(32px);
+
+      @include desktop {
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+      }
+
+      @include tablet {
+        font-size: calculateRem(16px);
+        line-height: calculateRem(24px);
+        width: calculateRem(24px);
+        height: calculateRem(24px);
+      }
+    }
+
+    @include desktop {
+      height: calculateRem(80px);
+      padding: calculateRem(23px);
+
+      &:hover,
+      &:focus {
+        padding: calculateRem(22px);
+      }
+    }
+
+    @include tablet {
+      height: calculateRem(64px);
+      padding: calculateRem(19px);
+      margin-bottom: calculateRem(14px);
+
+      &:hover,
+      &:focus {
+        padding: calculateRem(18px);
+      }
+    }
+
+    @include mobile {
+      font-size: calculateRem(14px);
+      line-height: calculateRem(22px);
+      height: calculateRem(50px);
+      padding: calculateRem(11px) calculateRem(19px);
+      margin-bottom: calculateRem(12px);
+
+      &:hover,
+      &:focus {
+        padding: calculateRem(10px) calculateRem(18px);
+      }
+    }
+  }
+}

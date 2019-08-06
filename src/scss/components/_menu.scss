@@ -1,0 +1,136 @@
+.menu {
+  @include min-tablet {
+    display: none;
+  }
+
+  @include tablet {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    transform: translateY(0);
+    background-color: $color-blue-light;
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @at-root .menu-opened & {
+    @include tablet {
+      transform: translateY(100%);
+    }
+  }
+
+  @at-root #{&}__inner {
+    @include container;
+
+    padding-top: calculateRem(104px);
+    padding-bottom: calculateRem(40px);
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+
+    @include tablet-small {
+      padding-top: calculateRem(96px);
+    }
+
+    @include mobile {
+      padding-top: calculateRem(84px);
+      padding-bottom: calculateRem(32px);
+    }
+
+    @include mobile-small {
+      padding-top: calculateRem(76px);
+    }
+  }
+
+  @at-root #{&}__buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: calculateRem(32px);
+
+    @at-root #{&} .button {
+      @include min-mobile-small {
+        &:not(:last-child) {
+          margin-right: calculateRem(20px);
+        }
+      }
+
+      @include mobile-small {
+        &:not(:last-child) {
+          margin-right: calculateRem(12px);
+        }
+      }
+    }
+  }
+
+  @at-root #{&}__list {
+    list-style: none;
+    margin-bottom: calculateRem(32px);
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @at-root #{&}__item {
+    display: block;
+    margin-bottom: calculateRem(12px);
+
+    @include tablet-small {
+      margin-bottom: calculateRem(8px);
+    }
+  }
+
+  @at-root #{&}__link {
+    @include transition-color;
+
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: rgba($color-white, 0.8);
+    }
+  }
+
+  @at-root #{&}__row {
+    display: block;
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+    height: calculateRem(60px);
+    margin-right: calculateRem(-20px);
+    margin-left: calculateRem(-20px);
+
+    @include mobile-small {
+      height: calculateRem(44px);
+    }
+  }
+
+  @at-root #{&}__scroll {
+    display: block;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-left: calculateRem(20px);
+    padding-right: calculateRem(20px);
+    padding-bottom: calculateRem(24px);
+
+    @at-root #{&} .button {
+      @include min-mobile-small {
+        &:not(:last-child) {
+          margin-right: calculateRem(12px);
+        }
+      }
+
+      @include mobile-small {
+        &:not(:last-child) {
+          margin-right: calculateRem(8px);
+        }
+      }
+    }
+  }
+}

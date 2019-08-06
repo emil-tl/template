@@ -1,0 +1,182 @@
+.footer {
+  background-color: $color-blue;
+
+  @at-root #{&}__inner {
+    @include container;
+  }
+
+  @at-root #{&}__top {
+    padding: calculateRem(80px) 0 calculateRem(32px);
+
+    @include mobile {
+      padding-top: calculateRem(40px);
+      padding-bottom: calculateRem(24px);
+    }
+  }
+
+  @at-root #{&}__nav {
+    @include min-tablet {
+      display: flex;
+      margin-left: calculateRem(-20px);
+      margin-right: calculateRem(-20px);
+      margin-bottom: calculateRem(94px);
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__col {
+    display: block;
+    padding-left: calculateRem(20px);
+    padding-right: calculateRem(20px);
+
+    @include min-desktop-small {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
+
+    @include desktop-small {
+      &:first-child {
+        display: none;
+      }
+
+      max-width: 25%;
+      flex: 0 0 25%;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @at-root #{&}__logo {
+    @include backgroundImageContain;
+
+    display: block;
+    width: calculateRem(120px);
+    height: calculateRem(60px);
+    background-image: url($svg-path + 'logo.svg');
+    margin-bottom: calculateRem(20px);
+
+    @include tablet {
+      width: calculateRem(100px);
+      height: calculateRem(52px);
+    }
+
+    @include mobile {
+      width: calculateRem(80px);
+      height: calculateRem(40px);
+    }
+
+    @include mobile-small {
+      width: calculateRem(64px);
+      height: calculateRem(32px);
+    }
+  }
+
+  @at-root #{&}__desc {
+    display: block;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(20px);
+    font-style: italic;
+    color: rgba($color-white, 0.4);
+  }
+
+  @at-root #{&}__heading {
+
+  }
+
+  @at-root #{&}__list {
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @at-root #{&}__item {
+    margin-bottom: calculateRem(12px);
+  }
+
+  @at-root #{&}__link {
+
+  }
+
+  @at-root #{&} .nav-block {
+    &:not(:last-child) {
+      margin-bottom: calculateRem(40px);
+    }
+  }
+
+  @at-root #{&}__row {
+    @include min-desktop-medium {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @at-root #{&}__contacts {
+    @include desktop-medium {
+      margin-bottom: calculateRem(24px);
+    }
+
+    @include mobile {
+      margin-bottom: calculateRem(20px);
+    }
+  }
+
+  @at-root #{&}__buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @at-root #{&} .button {
+      &:not(:last-child) {
+        margin-right: calculateRem(32px);
+      }
+    }
+  }
+
+  @at-root #{&}__bottom {
+    border-top: 1px solid rgba($color-white, 0.2);
+    padding: calculateRem(31px) 0 calculateRem(32px);
+
+    @include min-tablet-small {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      padding-top: calculateRem(24px);
+    }
+  }
+
+  @at-root #{&}__text {
+    display: block;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(20px);
+    color: rgba($color-white, 0.4);
+
+    @include tablet-small {
+      &:not(:last-child) {
+        margin-bottom: calculateRem(14px);
+      }
+    }
+
+    @include mobile {
+      font-size: calculateRem(14px);
+    }
+  }
+
+  @at-root #{&}__creator {
+    @include transition-color;
+
+    color: $color-white;
+
+    &:hover {
+      color: rgba($color-white, 0.8);
+    }
+  }
+}

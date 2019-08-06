@@ -1,0 +1,72 @@
+.intro {
+  display: flex;
+  align-items: flex-end;
+  padding: calculateRem(232px) 0 calculateRem(40px);
+  background-color: $color-blue;
+
+  @include min-tablet {
+    @include backgroundImageCover;
+
+    background-image: url($image-path + 'intro-bg.png');
+  }
+
+  @include min-tablet {
+    min-height: calculateRem(400px);
+  }
+
+  @include tablet {
+    padding: calculateRem(108px) 0 calculateRem(32px);
+  }
+
+  @include mobile {
+    padding-top: calculateRem(100px);
+  }
+
+  @include mobile-small {
+    padding-top: calculateRem(92px);
+  }
+
+  @at-root #{&}__content {
+    @include container;
+
+    color: $color-white;
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @at-root #{&}__breadcrumbs {
+    margin-bottom: calculateRem(12px);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__title {
+    margin-bottom: calculateRem(20px);
+  }
+
+  @at-root #{&}__date {
+    display: block;
+    font-size: calculateRem(20px);
+    line-height: calculateRem(26px);
+    color: rgba($color-white, 0.8);
+
+    @include tablet {
+      font-size: calculateRem(18px);
+      line-height: calculateRem(24px);
+    }
+
+    @include mobile {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(22px);
+    }
+
+    @include mobile-small {
+      font-size: calculateRem(14px);
+      line-height: calculateRem(20px);
+    }
+  }
+}

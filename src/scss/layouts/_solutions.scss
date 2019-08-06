@@ -1,0 +1,61 @@
+.solutions {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include min-desktop-medium {
+    margin-left: calculateRem(-20px);
+    margin-right: calculateRem(-20px);
+  }
+
+  @include from-to($desktop-medium, $mobile) {
+    margin-left: calculateRem(-16px);
+    margin-right: calculateRem(-16px);
+  }
+
+  @at-root #{&}__item {
+    @include min-desktop-medium {
+      padding-left: calculateRem(20px);
+      padding-right: calculateRem(20px);
+      margin-bottom: calculateRem(40px);
+    }
+
+    @include from-to($desktop-medium, $mobile) {
+      padding-left: calculateRem(16px);
+      padding-right: calculateRem(16px);
+      margin-bottom: calculateRem(32px);
+    }
+
+    @include min-desktop-medium {
+      flex: 0 0 25%;
+      max-width: 25%;
+
+      @include last-row(4) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include from-to($desktop-medium, $tablet) {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+
+      @include last-row(3) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include from-to($tablet, $mobile) {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      @include last-row(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: calculateRem(24px);
+      }
+    }
+  }
+}

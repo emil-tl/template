@@ -1,0 +1,37 @@
+select {
+  display: block;
+  font-size: calculateRem(16px);
+  line-height: calculateRem(20px);
+  padding: 0 calculateRem(15px);
+  color: $color-blue;
+  height: calculateRem(52px);
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgba($color-gray, 0.2);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url($svg-path + 'select-arrow.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right calculateRem(12px) top 50%, 0 0;
+  background-size: calculateRem(12px) auto, 100%;
+
+  @include mobile-small {
+    height: calculateRem(44px);
+    font-size: calculateRem(14px);
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  //outline: none;
+}
+
+select option {
+  display: block;
+  font-weight: normal;
+}

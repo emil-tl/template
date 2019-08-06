@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>Новость (детальная)</title>
+  <%- include ../../html/_common/meta.ejs %>
+</head>
+
+<body>
+
+<%- include ../../html/_common/header.ejs %>
+
+<main class="main" role="main">
+  <div class="intro">
+    <div class="intro__content">
+      <nav class="breadcrumbs intro__breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">Пресс-центр</li>
+        </ul>
+      </nav>
+      <h1 class="intro__title">Игруппа компаний SWR провела встречу с руководителями предприятий Уральского региона по
+        вопросам автоматизации позаказного производства</h1>
+      <time datetime="22.04.2019" class="intro__date">22 апреля 2019 года</time>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="wrap__block">
+      <div class="wrap__item container">
+        <div class="content content--left">
+          <p class="lead">Основной темой мероприятия, проводимого в формате делового обеда, стал вопрос существенного
+            сокращения сроков проведения заказов за счёт внедрения автоматизированных средств, закрывающих этапы
+            подготовки технико-коммерческого предложения, а также этапов конструкторской и технологической подготовки
+            производства. Этому была посвящена деловая часть встречи, которая в последствие перетекла в неформальную
+            дискуссию.</p>
+          <figure>
+            <img src="<%= require('@/assets/images/image-3.jpg') %>" alt="">
+            <figcaption><span>Рис. 1  /</span> АРМ SWR для конструктора</figcaption>
+          </figure>
+          <p>Гостей встречи особенно интересовали пути максимального исключения ручной работы и человеческого фактора в
+            подготовке коммерческой и технической документации по заказу. А также способы повышения точности оценки
+            себестоимости и трудоёмкости изделия и обеспечение быстрого реагирования на изменение исходных данных по
+            конкретному заказу.</p>
+          <p>В дальнейшем Группа компаний SWR планирует провести подобные мероприятия в Поволжье и Северо-Западной
+            регионе.</p>
+          <div class="content__block">
+            <h2 class="underline">о группе компаний SWR</h2>
+            <p>Группа компаний SWR предлагает широкий спектр профессиональных услуг в сфере внедрения масштабируемых
+              PLM-решений, включая опытно-конструкторские и технологические работы по созданию информационных систем по
+              техническому заданию заказчика, интеграционные проекты в рамках информационного кластера
+              PLM/ERP/MRP/MES/BI, поставку высокопроизводительных программно-аппаратных комплексов, инжиниринговые
+              проекты, технический аудит, аутсорсинг, работы по наследованию данных, консалтинг и многое другое.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap__block wrap__block--green">
+      <div class="wrap__item container">
+        <div class="wrap__heading wrap__heading--white">
+          <h2 class="wrap__title">Читайте также</h2>
+          <a href="#!" class="wrap__link">Пресс-центр</a>
+        </div>
+        <div class="news-list">
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-1.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR приняла участие в ежегодном Altium Форуме в
+                  Петергофе</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="22.05.2019">22 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-2.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Переход с P-CAD на Altium Designer для предприятий малого и среднего
+                  бизнеса</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="19.05.2019">19 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Пресс-релиз</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-3.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR провела встречу с руководителями предприятий Уральского
+                  региона по вопросам автоматизации позаказного производства</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="12.05.2019">12 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include ../../html/_common/footer.ejs %>
+
+<%- include ../../html/_common/svg-sprite.ejs %>
+
+<%- include ../../html/_common/photoswipe.ejs %>
+
+</body>
+
+</html>

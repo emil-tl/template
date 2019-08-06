@@ -1,0 +1,34 @@
+.breadcrumbs {
+
+  @at-root #{&}__list {
+    display: flex;
+    align-items: center;
+    font-size: calculateRem(14px);
+    line-height: calculateRem(24px);
+    color: rgba($color-white, 0.8);
+  }
+
+  @at-root #{&}__item {
+    display: flex;
+
+    &:not(:last-child) {
+      &:after {
+        display: inline-block;
+        font-size: calculateRem(14px);
+        content: '/';
+        margin: 0 calculateRem(6px);
+      }
+    }
+  }
+
+  @at-root #{&}__link {
+    @include transition-color;
+
+    display: block;
+    color: rgba($color-white, 0.8);
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>Пресс-центр</title>
+  <%- include ../../html/_common/meta.ejs %>
+</head>
+
+<body>
+
+<%- include ../../html/_common/header.ejs %>
+
+<main class="main" role="main">
+  <div class="intro">
+    <div class="intro__content">
+      <nav class="breadcrumbs intro__breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">Пресс-центр</li>
+        </ul>
+      </nav>
+      <h1 class="intro__title">Пресс-центр</h1>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="wrap__block" data-space="top-small">
+      <div class="wrap__item container">
+        <div class="wrap__filters">
+          <form class="filters">
+            <div class="filters__item">
+              <span class="filters__caption">Направление</span>
+              <select>
+                <option value="Все" selected>Все</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <span class="filters__caption">Бренд</span>
+              <select>
+                <option value="Выберите бренд" selected>Выберите бренд</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="news-list">
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-1.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR приняла участие в ежегодном Altium Форуме в
+                  Петергофе</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="22.05.2019">22 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-2.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Переход с P-CAD на Altium Designer для предприятий малого и среднего
+                  бизнеса</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="19.05.2019">19 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Пресс-релиз</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-3.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR провела встречу с руководителями предприятий Уральского
+                  региона по вопросам автоматизации позаказного производства</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="12.05.2019">12 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__info">
+                <p class="card-news__title">МИИГАиК 240 лет! Группа компаний SWR провела лекцию на тему «Аналитика
+                  больших данных в условиях цифровой трансформации»</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="08.05.2019">08 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-4.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Теплые опции. Горячие цены. Скидка 40 % при покупке FloEFD + Solid Edge</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="05.05.2019">5 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Акция</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-5.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">«Будь солиднее с SOLIDWORKS». Бюджетные цены на SOLIDWORKS Professional и
+                  SOLIDWORKS Premium с 1 апреля по 20 сентября 2019 г.</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="04.05.2019">4 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Акция</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-1.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR приняла участие в ежегодном Altium Форуме в
+                  Петергофе</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="22.05.2019">22 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-2.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Переход с P-CAD на Altium Designer для предприятий малого и среднего
+                  бизнеса</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="19.05.2019">19 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Пресс-релиз</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="news-list__item">
+            <a href="#!" class="card-news">
+              <div class="card-news__image"
+                   style="background-image: url(<%= require('@/assets/images/news-3.jpg') %>);"></div>
+              <div class="card-news__info">
+                <p class="card-news__title">Группа компаний SWR провела встречу с руководителями предприятий Уральского
+                  региона по вопросам автоматизации позаказного производства</p>
+                <ul class="card-news__details">
+                  <li>
+                    <time datetime="12.05.2019">12 мая 2019</time>
+                  </li>
+                  <li>
+                    <span class="card-news__tag">Мероприятие</span>
+                  </li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include ../../html/_common/footer.ejs %>
+
+<%- include ../../html/_common/svg-sprite.ejs %>
+
+</body>
+
+</html>

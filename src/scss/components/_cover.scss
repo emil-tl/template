@@ -1,0 +1,173 @@
+.cover {
+  padding-top: calculateRem(180px);
+  padding-bottom: calculateRem(112px);
+  overflow: hidden;
+
+  @include min-tablet {
+    @include backgroundImageCover;
+    background-image: url($image-path + 'cover-bg.jpg');
+  }
+
+  @include tablet {
+    @include backgroundImageContain;
+
+    background-color: $color-blue;
+    background-image: url($image-path + 'cover-bg-mob.png');
+  }
+
+  @include desktop-medium {
+    padding-top: calculateRem(240px);
+  }
+
+  @include desktop {
+    padding-bottom: calculateRem(48px);
+  }
+
+  @include min-tablet {
+    min-height: calculateRem(900px);
+  }
+
+  @include tablet {
+    padding-top: calculateRem(120px);
+    padding-bottom: calculateRem(40px);
+  }
+
+  @include mobile {
+    padding-top: calculateRem(100px);
+    padding-bottom: calculateRem(32px);
+  }
+
+  @include mobile-small {
+    padding-top: calculateRem(92px);
+  }
+
+  @at-root #{&}__inner {
+    @include container;
+
+    @at-root .page-main & {
+
+      @include from-to($desktop-large, $tablet) {
+        max-width: none;
+        padding-left: calculateRem(20px);
+        padding-right: calculateRem(20px);
+      }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
+  }
+
+  @at-root #{&}__info {
+    & > :last-child {
+      margin-bottom: 0;
+    }
+
+    width: 100%;
+    color: $color-white;
+
+    @include min-desktop {
+      max-width: calculateRem(388px);
+    }
+
+    @include from-to($desktop, $tablet) {
+      max-width: none;
+      width: 30%;
+    }
+
+    @include tablet {
+      margin-bottom: calculateRem(56px);
+    }
+
+    @include mobile {
+      margin-bottom: calculateRem(32px);
+    }
+  }
+
+  @at-root #{&}__title {
+    margin-bottom: calculateRem(20px);
+
+    @include from-to($desktop-medium, $desktop-base) {
+      font-size: calculateRem(56px);
+      line-height: calculateRem(70px);
+    }
+
+    @include from-to($desktop-base, $tablet) {
+      font-size: calculateRem(52px);
+      line-height: calculateRem(62px);
+    }
+
+    @include tablet {
+      margin-bottom: calculateRem(16px);
+    }
+
+    @include mobile {
+      margin-bottom: calculateRem(12px);
+    }
+
+    span {
+      display: block;
+      color: $color-green;
+    }
+  }
+
+  @at-root #{&}__text {
+    display: block;
+    font-size: calculateRem(24px);
+    line-height: calculateRem(32px);
+    color: rgba($color-white, 0.8);
+
+    @include desktop-base {
+      font-size: calculateRem(20px);
+      line-height: calculateRem(28px);
+    }
+
+    @include tablet {
+      font-size: calculateRem(18px);
+      line-height: calculateRem(26px);
+    }
+
+    @include mobile {
+      font-size: calculateRem(16px);
+      line-height: calculateRem(24px);
+    }
+
+    @include mobile-small {
+      font-size: calculateRem(14px);
+      line-height: calculateRem(22px);
+    }
+  }
+
+  @at-root #{&}__obj {
+    @include min-desktop {
+      flex-shrink: 0;
+      padding-right: calculateRem(40px);
+    }
+
+    @include desktop {
+      max-width: none;
+      width: 70%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__links {
+    width: 100%;
+    color: $color-white;
+
+    @include min-desktop {
+      max-width: calculateRem(388px);
+    }
+
+    @include from-to($desktop, $tablet) {
+      margin-top: calculateRem(80px);
+    }
+  }
+}

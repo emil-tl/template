@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>Map</title>
+  <%- include ../_common/meta.ejs %>
+</head>
+
+<style>
+
+  .wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+  }
+
+  .map-list {
+    display: block;
+  }
+
+  .map-list .map-list__item {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .map-list .map-list__link {
+    font-size: 40px;
+    line-height: 48px;
+    color: #E72222;
+    transition: color 0.2s ease-out;
+    font-weight: bold;
+  }
+
+  .map-list .map-list__link:hover {
+    color: #f42222;
+  }
+
+  .map-list .map-list__link--unfinished {
+    color: gray;
+  }
+
+  .map-list .map-list__link--unfinished:hover {
+    color: lightgray;
+  }
+</style>
+
+<body>
+
+<main class="main" role="main">
+  <div class="wrapper">
+    <ul class="map-list">
+      <li class="map-list__item">
+        <a href="<%= htmlWebpackPlugin.options.home %>" class="map-list__link" target="_blank">Главная</a>
+      </li>
+      <li class="map-list__item">
+        <a href="about<%= htmlWebpackPlugin.options.ext %>" class="map-list__link" target="_blank">О компании</a>
+      </li>
+      <li class="map-list__item">
+        <a href="solutions<%= htmlWebpackPlugin.options.ext %>" class="map-list__link" target="_blank">Решения</a>
+      </li>
+      <li class="map-list__item">
+        <a href="solutions-detail<%= htmlWebpackPlugin.options.ext %>" class="map-list__link" target="_blank">Решения (детальная)</a>
+      </li>
+      <li class="map-list__item">
+        <a href="press-center<%= htmlWebpackPlugin.options.ext %>" class="map-list__link" target="_blank">Пресс-центр</a>
+      </li>
+      <li class="map-list__item">
+        <a href="news-detail<%= htmlWebpackPlugin.options.ext %>" class="map-list__link" target="_blank">Новость (детальная)</a>
+      </li>
+    </ul>
+  </div>
+</main>
+
+</body>
+
+</html>

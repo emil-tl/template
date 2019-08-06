@@ -1,0 +1,75 @@
+.files {
+  $root: &;
+
+  background-color: $color-white;
+  padding-left: calculateRem(32px);
+  border-radius: 4px;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    padding-left: calculateRem(28px);
+  }
+
+  @include mobile {
+    padding-left: calculateRem(24px);
+  }
+
+  @at-root #{&}__item {
+    display: flex;
+    align-items: flex-start;
+    padding: calculateRem(32px) calculateRem(32px) calculateRem(32px) 0;
+    background-color: $color-white;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid rgba($color-gray, 0.2);
+    }
+
+    &:before {
+      @include backgroundImageContain;
+
+      display: block;
+      width: calculateRem(34px);
+      height: calculateRem(44px);
+      background-image: url($svg-path + 'file.svg');
+      content: '';
+      flex-shrink: 0;
+      margin-right: calculateRem(24px);
+
+      @include tablet {
+        width: calculateRem(28px);
+        height: calculateRem(36px);
+        margin-right: calculateRem(20px);
+      }
+    }
+
+    @include tablet {
+      padding: calculateRem(28px) calculateRem(28px) calculateRem(28px) 0;
+    }
+
+    @include mobile {
+      padding: calculateRem(24px) calculateRem(24px) calculateRem(24px) 0;
+    }
+  }
+
+  @at-root #{&}__name {
+    #{$root}__info & {
+      margin-bottom: calculateRem(4px);
+    }
+  }
+
+  @at-root #{&}__info {
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @at-root #{&}__caption {
+    display: block;
+    font-size: calculateRem(16px);
+    line-height: calculateRem(20px);
+    color: rgba($color-gray, 0.6);
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>О компании</title>
+  <%- include ../../html/_common/meta.ejs %>
+</head>
+
+<body>
+
+<%- include ../../html/_common/header.ejs %>
+
+<main class="main" role="main">
+  <div class="intro">
+    <div class="intro__content">
+      <nav class="breadcrumbs intro__breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">О компании</li>
+        </ul>
+      </nav>
+      <h1 class="intro__title">О компании</h1>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="wrap__block">
+      <div class="wrap__item container wrap__item--divide">
+        <div class="wrap__side">
+          <div class="sidebar">
+            <a href="#!" class="sidebar__item">История
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+            <a href="#!" class="sidebar__item">Карьера
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+            <a href="#!" class="sidebar__item">Контакты
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="wrap__content">
+          <div class="content">
+            <p class="lead">Группа компаний SWR – крупнейший поставщик современных технологий автоматизации
+              конструкторско-технологических подразделений и инжиниринговых услуг для промышленных предприятий,
+              конструкторских бюро и научных институтов Российской Федерации и стран СНГ. Компания работает на рынке
+              CAD/CAM/CAE/PLM решений с 1991 года. </p>
+            <p>Группа компаний SWR предлагает широкий спектр профессиональных услуг в сфере внедрения масштабируемых
+              PLM-решений, включая опытно-конструкторские и технологические работы по созданию информационных систем по
+              техническому заданию заказчика, интеграционные проекты в рамках информационного кластера
+              PLM/ERP/MRP/MES/BI,
+              поставку высокопроизводительных программно-аппаратных комплексов, инжиниринговые проекты, технический
+              аудит,
+              аутсорсинг, работы по наследованию данных, консалтинг и многое другое.</p>
+            <p>Постоянными заказчиками компании являются более 3 000 предприятий и 400 учебных заведений России и стран
+              ближнего зарубежья.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include ../../html/_common/footer.ejs %>
+
+<%- include ../../html/_common/svg-sprite.ejs %>
+
+</body>
+
+</html>

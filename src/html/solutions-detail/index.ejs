@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <title>Решения (детальная)</title>
+  <%- include ../../html/_common/meta.ejs %>
+</head>
+
+<body>
+
+<%- include ../../html/_common/header.ejs %>
+
+<main class="main" role="main">
+  <div class="intro">
+    <div class="intro__content">
+      <nav class="breadcrumbs intro__breadcrumbs" aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">О компании</a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">История компании</li>
+        </ul>
+      </nav>
+      <h1 class="intro__title">Интегрированный программный комплекс APM SWR</h1>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="wrap__block">
+      <div class="wrap__item container">
+        <div class="content content--left" data-photoswipe>
+          <p class="lead">АРМ SWR — российское программное обеспечение для поддержки автоматизированного проектирования
+            изделий, разработки технологических и производственных процессов изготовления и управления данными на
+            протяжении ЖЦИ, в том числе базой данных материалов и комплектующих.</p>
+          <p>Система представляет собой автоматизированное рабочее место участника процесса КТПП, обеспечивающее доступ
+            к средствам автоматизации работ, пулу информационных ресурсов и библиотекам, набор которых определяется
+            используемыми системами 2D/3D-моделирования и специализацией выполняемых задач: 3D-моделирование, инженерные
+            расчеты, анализ технологичности, электротехническое проектирование, разработка ИЭТР, механообработка,
+            управление проектом. Система обеспечивает ролевую модель прав доступа к WEB-Ресурсу АРМ SWR-Материалы для
+            безопасного управления справочниками. Система поставляется с настройками под инструменты проектирования,
+            используемые на предприятии. Также в ходе внедрения возможна персонализация настроек и конфигурации
+            программного комплекса, подготовка образов для быстрого развертывания на новых рабочих местах.</p>
+          <figure>
+            <img src="<%= require('@/assets/images/image-1.jpg') %>"
+                 data-image="<%= require('@/assets/images/image-1.jpg') %>"
+                 data-size="1061x596"
+                 alt="">
+            <figcaption><span>Рис. 1  /</span> АРМ SWR для конструктора</figcaption>
+          </figure>
+          <div class="content__block">
+            <h2 class="underline">АРМ SWR включает в себя:</h2>
+            <ul>
+              <li>Офисные приложения: MS Office, OpenOffice, LibreOffice;</li>
+              <li>Графические редакторы: Adobe Photoshop, CorelDRAW, GIMP, OpenOffice.org Draw, Gravit;</li>
+              <li>САПР: AutoCAD, NanoCAD, SolidWorks, SolidEdge, Creo, Компас, AltiumDesigner;</li>
+              <li>CAPP: СПРУТ ТП, SWR-Технология;</li>
+              <li>PDM / VCS: SWE PDM, Search, IPS, SVN;</li>
+              <li>MES: СПРУТ-ОКП.</li>
+            </ul>
+          </div>
+          <figure>
+            <img src="<%= require('@/assets/images/image-2.jpg') %>"
+                 data-image="<%= require('@/assets/images/image-2.jpg') %>"
+                 data-size="1061x596"
+                 alt="">
+            <figcaption><span>Рис. 2  /</span> АРМ SWR для конструктора</figcaption>
+            <p>АРМ SWR позволяет значительно упростить настройку и конфигурирование Программного комплекса, включающего
+              произвольный состав компонент, и обеспечить пользователя всей необходимой информацией и справочными
+              данными в рамках единого интерфейса.</p>
+          </figure>
+          <div class="content__block">
+            <h2 class="underline">АРМ SWR взаимодействует со следующим ПО:</h2>
+            <ul>
+              <li>Офисные приложения: MS Office, OpenOffice, LibreOffice;</li>
+              <li>Графические редакторы: Adobe Photoshop, CorelDRAW, GIMP, OpenOffice.org Draw, Gravit;</li>
+              <li>САПР: AutoCAD, NanoCAD, SolidWorks, SolidEdge, Creo, Компас, AltiumDesigner;</li>
+              <li>CAPP: СПРУТ ТП, SWR-Технология;</li>
+              <li>PDM / VCS: SWE PDM, Search, IPS, SVN;</li>
+              <li>MES: СПРУТ-ОКП.</li>
+            </ul>
+          </div>
+          <div class="content__block">
+            <div class="files">
+              <a href="#!" class="files__item">
+                <div class="files__info">
+                  <p class="files__name h4">Руководство по установке APM SWR</p>
+                  <p class="files__caption">pdf, 12 мб.</p>
+                </div>
+              </a>
+              <a href="#!" class="files__item">
+                <div class="files__info">
+                  <p class="files__name h4">Руководство пользователя APM SWR Desktop 2019</p>
+                  <p class="files__caption">pdf, 12 мб.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap__block wrap__block--green">
+      <div class="wrap__item container">
+        <div class="wrap__heading wrap__heading--white">
+          <h2 class="wrap__title">популярные решения</h2>
+          <a href="#!" class="wrap__link">Все решения</a>
+        </div>
+        <div class="solutions">
+          <div class="solutions__item">
+            <a href="#!" class="card-solution">
+              <p class="card-solution__title h4">SWR-архив
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </p>
+              <p class="card-solution__text">Учет и хранение документации, работы с книгами учета документов и
+                управление архивной документацией</p>
+            </a>
+          </div>
+          <div class="solutions__item">
+            <a href="#!" class="card-solution">
+              <p class="card-solution__title h4">SWR-редактор спецификаций
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </p>
+              <p class="card-solution__text">Учет и хранение документации, работы с книгами учета документов и
+                управление архивной документацией</p>
+            </a>
+          </div>
+          <div class="solutions__item">
+            <a href="#!" class="card-solution">
+              <p class="card-solution__title h4">SWR-материла
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </p>
+              <p class="card-solution__text">Учет и хранение документации, работы с книгами учета документов и
+                управление архивной документацией</p>
+            </a>
+          </div>
+          <div class="solutions__item">
+            <a href="#!" class="card-solution">
+              <p class="card-solution__title h4">SWR-библиотеки
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </p>
+              <p class="card-solution__text">Учет и хранение документации, работы с книгами учета документов и
+                управление архивной документацией</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include ../../html/_common/footer.ejs %>
+
+<%- include ../../html/_common/svg-sprite.ejs %>
+
+<%- include ../../html/_common/photoswipe.ejs %>
+
+</body>
+
+</html>

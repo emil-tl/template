@@ -1,0 +1,39 @@
+// Transitions
+@mixin transition-color {
+    transition: color 0.2s ease-out;
+}
+
+@mixin transition-background-color {
+    transition: background-color 0.2s ease-out;
+}
+
+@mixin backgroundImageCover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin backgroundImageContain {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+@mixin push--auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin last-row($count) {
+    &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}),
+    &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}) ~ & {
+        @content;
+    }
+}
+
+@mixin last-row-with-item($count, $item) {
+    &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}),
+    &:nth-child(#{$count}n+1):nth-last-child(-n+#{$count}) ~ #{$item} {
+        @content;
+    }
+}

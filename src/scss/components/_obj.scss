@@ -1,0 +1,313 @@
+.obj {
+  $root: &;
+
+
+  @at-root #{&}__inner {
+    position: relative;
+    width: calculateRem(742px);
+    height: calculateRem(580px);
+
+    @include desktop-medium {
+      width: calculateRem(640px);
+      height: calculateRem(500px);
+    }
+  }
+
+  @at-root #{&}__background {
+    @include backgroundImageCover;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  @at-root #{&}__hint {
+    position: absolute;
+
+    &:nth-child(1) {
+      top: calculateRem(8px);
+      right: calculateRem(92px);
+
+      @include desktop-medium {
+        top: calculateRem(-4px);
+        right: calculateRem(80px);
+      }
+
+      @include desktop-small {
+        right: calculateRem(150px);
+      }
+    }
+
+    &:nth-child(2) {
+      top: calculateRem(172px);
+      right: calculateRem(70px);
+
+      @include desktop-medium {
+        top: calculateRem(164px);
+        right: calculateRem(56px);
+      }
+
+      @include desktop-small {
+        right: calculateRem(132px);
+      }
+    }
+
+    &:nth-child(3) {
+      right: calculateRem(90px);
+      top: calculateRem(294px);
+
+      @include desktop-medium {
+        right: calculateRem(72px);
+        top: calculateRem(260px);
+      }
+
+      @include desktop-small {
+        right: calculateRem(100px);
+      }
+    }
+
+    &:nth-child(4) {
+      right: calculateRem(100px);
+      bottom: calculateRem(78px);
+
+      @include desktop-medium {
+        right: calculateRem(94px);
+        bottom: calculateRem(56px);
+      }
+
+      @include desktop-small {
+        right: calculateRem(140px);
+      }
+    }
+
+    &:nth-child(5) {
+      right: calculateRem(245px);
+      bottom: calculateRem(-14px);
+
+      @include desktop-medium {
+        right: calculateRem(240px);
+        bottom: 0;
+      }
+
+      @include desktop-small {
+        right: calculateRem(240px);
+      }
+    }
+
+    &:nth-child(6) {
+      left: calculateRem(120px);
+      bottom: calculateRem(-4px);
+
+      @include desktop-medium {
+        left: calculateRem(120px);
+        bottom: calculateRem(-4px);
+      }
+    }
+
+    &:nth-child(7) {
+      bottom: calculateRem(54px);
+      left: 0;
+
+      @include desktop-medium {
+        left: calculateRem(32px);
+        bottom: calculateRem(40px);
+      }
+    }
+
+    &:nth-child(8) {
+      top: calculateRem(200px);
+      left: calculateRem(140px);
+
+      @include desktop-medium {
+        top: calculateRem(164px);
+        left: calculateRem(120px);
+      }
+
+      @include desktop-small {
+        left: calculateRem(150px);
+      }
+    }
+
+    &:nth-child(9) {
+      left: calculateRem(264px);
+      top: calculateRem(162px);
+    }
+
+    &:nth-child(10) {
+      left: calculateRem(280px);
+      top: calculateRem(8px);
+
+      @include desktop-medium {
+        left: calculateRem(264px);
+        top: calculateRem(16px);
+      }
+    }
+  }
+
+  @at-root #{&}__button {
+    position: relative;
+    display: block;
+    width: calculateRem(60px);
+    height: calculateRem(60px);
+    border: 1px solid $color-green;
+    border-radius: 50%;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      width: calculateRem(12px);
+      height: calculateRem(12px);
+      background-color: $color-white;
+      content: '';
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      position: absolute;
+      width: calculateRem(8px);
+      height: calculateRem(8px);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      animation: ripple 1.4s linear infinite;
+      background-color: rgba($color-white, 0.2);
+    }
+  }
+
+  @at-root #{&}__label {
+    position: absolute;
+    display: none;
+    width: calculateRem(180px);
+    font-family: $font-pt-cuprum;
+    font-size: calculateRem(28px);
+    line-height: calculateRem(36px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    bottom: calculateRem(86px);
+    right: calculateRem(-26px);
+    transform: translateX(100%);
+    padding-bottom: calculateRem(6px);
+    border-bottom: 1px solid $color-white;
+
+    @include desktop {
+      font-size: calculateRem(24px);
+      line-height: calculateRem(32px);
+      width: calculateRem(160px);
+    }
+
+    @include desktop-small {
+      font-size: calculateRem(20px);
+      line-height: calculateRem(28px);
+      width: calculateRem(140px);
+    }
+
+    &:before {
+      position: absolute;
+      display: block;
+      width: calculateRem(80px);
+      border-bottom: 1px solid $color-white;
+      content: '';
+      left: 0;
+      bottom: calculateRem(-1px);
+      transform-origin: left center;
+      transform: rotate(135deg);
+      pointer-events: none;
+    }
+
+    #{$root}__hint.show & {
+      display: block;
+    }
+
+    #{$root}__hint--left & {
+      right: calculateRem(78px);
+      transform: translateX(0);
+
+      &:before {
+        left: auto;
+        right: 0;
+        transform-origin: right center;
+        transform: rotate(230deg);
+      }
+    }
+
+    #{$root}__hint--bottom & {
+      bottom: calculateRem(-26px);
+
+      &:before {
+        transform: rotate(224deg);
+      }
+    }
+
+    #{$root}__hint--bottom-left & {
+      right: calculateRem(84px);
+      transform: translateX(0);
+      bottom: calculateRem(-26px);
+
+      &:before {
+        left: auto;
+        right: 0;
+        transform-origin: right center;
+        transform: rotate(135deg);
+      }
+    }
+
+    #{$root}__hint--long & {
+      @include min-desktop {
+        bottom: calculateRem(172px);
+
+        &:before {
+          width: calculateRem(150px);
+          transform: rotate(111deg);
+        }
+      }
+    }
+
+    #{$root}__hint--long#{$root}__hint--bottom & {
+      @include min-desktop {
+        bottom: calculateRem(-176px);
+
+        &:before {
+          width: calculateRem(212px);
+          transform: rotate(-105deg);
+        }
+      }
+    }
+
+    #{$root}__hint--long#{$root}__hint--left & {
+      @include min-desktop {
+        bottom: calculateRem(150px);
+
+        &:before {
+          width: calculateRem(124px);
+          transform: rotate(-112deg);
+        }
+      }
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba($color-white, 0.2),
+  }
+  50% {
+    box-shadow: 0 0 0 calculateRem(22px) rgba($color-white, 0.2);
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 0 calculateRem(26px) rgba($color-white, 0.2);
+  }
+}
